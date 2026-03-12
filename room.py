@@ -1,5 +1,5 @@
 class Room:
-    def __init__(self, number, description):
+    def __init__(self, number: int, description: str):
         self.number = number
         self.description = description
         self.visited = False
@@ -7,10 +7,10 @@ class Room:
 
     def show_description(self):
         print("\n" + "=" * 50)
-        print(f"Комната № {self.number}")
+        print(f"Комната №{self.number}")
         print(self.description)
         if self.visited:
-            print("⚠ Вы уже посещали эту комнату")
+            print("✔ Комната уже засчитана")
         print("=" * 50)
 
     def show_directions(self):

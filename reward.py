@@ -1,7 +1,10 @@
 class Reward:
-    def __init__(self, description, reward_type):
+    RESET = "reset"
+    SKIP = "skip"
+
+    def __init__(self, description: str, reward_type: str):
         self.description = description
         self.type = reward_type
 
     def show(self):
-        print(self.description)
+        print(f"{self.description} ({self.type})")
